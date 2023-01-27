@@ -71,8 +71,17 @@ console.log('test - should return undefined', getLast(testArray2))
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  
+  for (let i = 0; i <= array.length; i++) {
+    if (array[i] === value) {
+      return true;
+    } else if (i === array.length) {
+      return false;
+    }
+  }
 }
+
+console.log('test - should return true:', find('apple', testArray1));
+console.log('Test - should return false', find('grape', testArray1));
 
 // ----------------------
 // Stretch Goals
