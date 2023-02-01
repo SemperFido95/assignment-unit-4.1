@@ -71,14 +71,27 @@ console.log('6. Test - should return undefined', getLast(testArray2))
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 
-function find( value, array ){
-  for (let i = 0; i <= array.length; i++) {
-    if (array[i] === value) {
+// This is the original function I wrote.
+// I'm keeping it even though I rewrote it below
+// so I can see my progress :) 
+
+// function find( value, array ){
+//   for (let i = 0; i <= array.length; i++) {
+//     if (array[i] === value) {
+//       return true;
+//     } else if (i === array.length) {
+//       return false;
+//     }
+//   } return false;
+// }
+
+function find(value, array) {
+  for(let i of array) {
+    if (i === value) {
       return true;
-    } else if (i === array.length) {
-      return false;
     }
-  } 
+  }
+  return false;
 }
 
 
