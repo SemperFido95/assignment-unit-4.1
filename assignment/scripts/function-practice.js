@@ -9,7 +9,7 @@ function hello() {
   return 'Hello World!';
 }
 // Call the function to test
-console.log('Test - should say "Hello World!"', hello());
+console.log('1. Test - should say "Hello World!"', hello());
 
 
 // 2. Function to return a personalized hello, using the `name` argument.
@@ -18,21 +18,21 @@ function helloName( name ) {
   return `Hello, ${name}!`;
 }
 // Remember to call the function to test
-console.log('Test - should say "Hello, Bailey!":', helloName('Bailey'));
+console.log('2. Test - should say "Hello, Bailey!":', helloName('Bailey'));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
   return firstNumber + secondNumber;
 }
 
-console.log('Test - should output the number 12:', addNumbers(8, 4));
+console.log('3. Test - should output the number 12:', addNumbers(8, 4));
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( firstNumber, secondNumber, thirdNumber ){
   return firstNumber * secondNumber * thirdNumber;
 }
 
-console.log('Test - should output the number 48:', multiplyThree(8, 3, 2));
+console.log('4. Test - should output the number 48:', multiplyThree(8, 3, 2));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
@@ -46,9 +46,9 @@ function isPositive( number ) {
 
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-console.log( 'isPositive - should say true', isPositive(3) );
-console.log( 'isPositive - should say false', isPositive(0) );
-console.log( 'isPositive - should say false', isPositive(-3) );
+console.log( '5. isPositive - should say true', isPositive(3) );
+console.log( '5. isPositive - should say false', isPositive(0) );
+console.log( '5. isPositive - should say false', isPositive(-3) );
 
 
 // 6. Function to return the _last_ item in an array. If the 
@@ -64,12 +64,13 @@ function getLast( array ) {
 let testArray1 = ['orange', 'banana', 'apple'];
 let testArray2 = {};
 
-console.log('test - should return the word "apple"', getLast(testArray1));
-console.log('test - should return undefined', getLast(testArray2))
+console.log('6. Test - should return the word "apple"', getLast(testArray1));
+console.log('6. Test - should return undefined', getLast(testArray2))
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+
 function find( value, array ){
   for (let i = 0; i <= array.length; i++) {
     if (array[i] === value) {
@@ -77,11 +78,12 @@ function find( value, array ){
     } else if (i === array.length) {
       return false;
     }
-  }
+  } 
 }
 
-console.log('test - should return true:', find('apple', testArray1));
-console.log('Test - should return false', find('grape', testArray1));
+
+console.log('7. Test - should return true:', find('apple', testArray1));
+console.log('7. Test - should return false', find('grape', testArray1));
 
 // ----------------------
 // Stretch Goals
@@ -92,8 +94,8 @@ console.log('Test - should return false', find('grape', testArray1));
 let isFirstLetter = (letter, string) => letter === string[0] ? true : false;
 //arrow function and ternary operator to make code as concise as possible :)
 
-console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
-console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
+console.log( '8. Test - isFirstLetter - should say true', isFirstLetter('a', 'apple') );
+console.log( '8. Test - isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
 
@@ -108,7 +110,7 @@ function sumAll(array) {
   return sum;
 }
 
-console.log('Test - should return the number 14:', sumAll(numArray));
+console.log('9. Test - should return the number 14:', sumAll(numArray));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
@@ -127,8 +129,8 @@ function getPositiveNums (array) {
   return positiveNums;
 }
 
-console.log('Test - Should return array of positive numbers', getPositiveNums(allNums));
-console.log('Test - should return an empty array', getPositiveNums(noPositives));
+console.log('10. Test - Should return array of positive numbers', getPositiveNums(allNums));
+console.log('10. Test - should return an empty array', getPositiveNums(noPositives));
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
@@ -161,4 +163,4 @@ function duplicateCount(string) {
   } return counter;
 }
 
-console.log('Test - should return the number 3', duplicateCount('aA!5!5'));
+console.log('11. Test - should return the number 3', duplicateCount('aA!5!5'));
